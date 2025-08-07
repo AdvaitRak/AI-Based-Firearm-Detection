@@ -1,86 +1,106 @@
-# AI Based Firearm Detection
+# 🔍 AI-Based Firearm Detection
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project aims to detect weapons in real-time through cameras and notify authorities instantly. It's a mini project demonstrating the use of deep learning for security purposes.
+This is an independent mini project that leverages **deep learning** and **computer vision** to detect firearms in real-time through live camera feeds. Built using **YOLOv8**, it demonstrates how AI can enhance security and public safety by triggering alerts the moment a weapon is spotted.
 
-## Features
+---
 
-- **Real-time Detection**: Utilizes live camera feeds to detect weapons.
-- **Instant Notifications**: Sends immediate alerts to authorities when a weapon is detected.
-- **GUI Application**: User-friendly graphical interface for monitoring.
-- **Customizable Alerts**: Alarm sound (`alarm.mp3`) can be customized.
-- **Web Server**: Includes a web server component for managing and viewing detections.
+## 🚀 Features
 
-## Installation
+- 🎯 **Real-Time Firearm Detection** using YOLOv8  
+- 📢 **Instant Alerts** with customizable alarm sounds  
+- 🖥️ **GUI Interface** for simple, local monitoring  
+- 🌐 **Web Server Dashboard** using Django  
+- 🛠️ **Trainable and Extendable** on new custom datasets  
 
-1. **Clone the Repository**
+---
+
+## 🧩 Installation
+
+1. **Clone This Repository**
    ```bash
-   git clone https://github.com/AryamanRoy/AI-Based-Firearm-Detection.git
-   cd realtime-weapon-detection
+   git clone https://github.com/AdvaitRak/AI-Based-Firearm-Detection.git
+   cd AI-Based-Firearm-Detection
    ```
 
-2. **Install Dependencies**
-   Ensure you have Python installed. Then, install the required Python packages:
+2. **Install Dependencies**  
+   Make sure you have Python 3.8+ and then run:
    ```bash
    pip install -r needs.txt
    ```
 
-3. **Download YOLOv8 Model**
-   The project uses a pre-trained YOLOv8 model (`yolov8m.pt`) for detection.
+3. **Download YOLOv8 Model**  
+   Place the `yolov8m.pt` file in the project root. You can download it from [Ultralytics YOLOv8 GitHub](https://github.com/ultralytics/ultralytics).
 
-## Usage
+---
 
-1. **Running the GUI Application**
-   ```bash
-   python guiapp.py
-   ```
+## 🧪 Usage
 
-2. **Running the Web Server**
-   Navigate to the `weapon_detection_server` directory and start the server:
-   ```bash
-   cd weapon_detection_server
-   python manage.py runserver
-   ```
+### 1. Run the GUI App
+```bash
+python guiapp.py
+```
 
-3. **Training the Model**
-   To train the model on a new dataset, use:
-   ```bash
-   python train.py
-   ```
+### 2. Launch the Web Dashboard (Django)
+```bash
+cd weapon_detection_server
+python manage.py runserver
+```
 
-4. **Testing the Model**
-   To test the model, run:
-   ```bash
-   python test.py
-   ```
+### 3. Train on Custom Dataset
+```bash
+python train.py
+```
 
-5. **Downloading Images**
-   To download images for training or testing, use:
-   ```bash
-   python download_images.py
-   ```
+### 4. Test the Model
+```bash
+python test.py
+```
 
-## Project Structure
+### 5. Download Images for Training/Testing
+```bash
+python download_images.py
+```
 
-- **alarm.mp3**: The sound file played when a weapon is detected.
-- **best.pt**: The best performing model checkpoint.
-- **download_images.py**: Script to download images for training/testing.
-- **guiapp.py**: Main script to run the graphical user interface application.
-- **needs.txt**: File listing required Python packages.
-- **oog.py**: Additional script for miscellaneous tasks.
-- **test.py**: Script to test the trained model.
-- **train.py**: Script to train the model.
-- **yolov8m.pt**: Pre-trained YOLOv8 model.
-- **weapon_detection_server/**: Directory containing the web server application.
-  - **app1/**: Django app handling weapon detection.
-  - **media/**: Directory for media files.
-  - **static/**: Directory for static files.
-  - **template/**: Directory for HTML templates.
-  - **db.sqlite3**: SQLite database file.
-  - **manage.py**: Django management script.
+---
 
-## Contributing
+## 📁 Project Structure
 
-Contributions are welcome! Please create an issue or submit a pull request for any improvements.
+```
+├── alarm.mp3                  # Alarm sound file  
+├── best.pt                    # Trained model checkpoint  
+├── guiapp.py                  # Main GUI application  
+├── train.py                   # Training script  
+├── test.py                    # Testing script  
+├── oog.py                     # Miscellaneous script  
+├── download_images.py         # For image scraping  
+├── needs.txt                  # Python dependencies  
+├── yolov8m.pt                 # Pre-trained YOLOv8 model  
+└── weapon_detection_server/   # Django web server  
+    ├── app1/                  # Django app logic  
+    ├── media/                 # Uploaded images  
+    ├── static/                # CSS/JS files  
+    ├── template/              # HTML templates  
+    ├── db.sqlite3             # SQLite database  
+    └── manage.py              # Django management script  
+```
 
+---
 
+## 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to submit issues, feature requests, or pull requests.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## 👤 Author
+
+**Advait Rak**  
+This is an independent project built for academic and practical exploration in AI-powered security systems.
